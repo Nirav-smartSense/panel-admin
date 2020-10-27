@@ -1,0 +1,269 @@
+.sidebar-panel{
+    font-family: $font-family;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    top: 0;
+    width: 250px;
+    background: $black-color-1;
+    transition: all .5s;
+
+    .logo{
+        padding: 10px 15px;
+        font-size: 36px;
+        line-height: 42px;
+        border-bottom: 1px solid $secondary-color;
+
+        a{
+            text-decoration: none;
+            color: $white-color;
+            transition: all .5s;
+
+            &.logo_colls{
+                display: none;
+                font-size: 48px;
+                font-weight: bold;
+            }
+        }
+
+        span{
+            font-size: 14px;
+            color: $white-color;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            display: none;
+
+            @include respond('phone'){
+                display: block;
+            }
+        }
+        
+    }
+
+    .sidebar-inner{
+        height: 590px;
+
+        ul{
+            padding: 0;
+            margin: 0;
+            li{
+                font-size: 13px;
+                line-height: 18px;
+                padding: 5px 0;
+                list-style-type: none;
+                color: $grey-shade;
+
+                &.active{
+                    
+                    a{
+                        color: $white-color;
+                        .fa{
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    .sub-menu{
+                        display: block;
+                    }
+                }
+
+                .sub-menu{
+                    padding-left: 30px;
+                    display: none;
+
+                    li{
+                        position: relative;
+
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            height: 3px;
+                            width: 3px;
+                            border: 1px solid $white-color;
+                            left: -8px;
+                            top: 16px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                a{
+                    color: $grey-shade;
+                    text-decoration: none;
+                    padding: 5px 15px;
+                    // transition: all .4s;
+                    display: block;
+
+                    svg{
+                        margin-right: 7px;
+                        vertical-align: bottom;
+                        height: 18px;
+                        width: 18px;
+                    }
+
+                    &:hover{
+                        color: $white-color;
+                    }
+
+                    .fa{
+                        float: right;
+                        font-size: 8px;
+                        line-height: 18px;
+                    }
+                }
+                
+                &.menu-header{
+                    color: $white-color;
+                    margin: 20px 0 0 15px;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        &:hover{
+            .mCSB_scrollTools{
+                opacity: 0.75;
+            }
+        }
+
+        .mCSB_inside{
+            .mCSB_container{
+                margin-right: 10px;
+            }
+        }
+        .mCSB_scrollTools{
+            opacity: 0;
+        }
+    }
+
+    .footer-menu{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 250px;
+        border-top: 1px solid $secondary-color;
+        background: $black-color-1;
+        transition: all .5s;
+
+        ul{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+            li{
+                list-style-type: none;
+                width: 100%;
+                padding: 15px;
+
+                a{
+                    text-decoration: none;
+                    display: block;
+                    color: $grey-shade;
+                }
+            }
+        }
+
+        @include respond('phone'){
+            width: 100%;
+        }
+    }
+
+    &.collapsed{
+        // width: 60px;
+        margin-left: -180px;
+
+        .logo{
+            transition: all .5s;
+            a{
+                &.logo_main{
+                    display: none;
+                    @include respond('phone'){
+                        display: inline-block;
+                    }
+                }
+                &.logo_colls{
+                    display: block;
+                    margin-left: 180px;
+
+                    @include respond('phone'){
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .sidebar-inner{
+            ul{
+                li{
+                    a{
+                        margin-left: 180px;
+                        // transition: all .5s;
+                        span{
+                            display: none;
+                            @include respond('phone'){
+                                display: inline-block;
+                            }
+                        }
+
+                        .fa{
+                            display: none;
+
+                            @include respond('phone'){
+                                display: block;
+                            }
+                        }
+
+                        @include respond('phone'){
+                            margin-left: 0;
+                        }
+                    }
+
+                    &.active{
+                        ul{
+                            display: none;
+                        }
+                    }
+
+                    &.menu-header{
+                        display: none;
+                    }
+
+                    &:hover{
+                        background: $black-color;
+                    }
+                }
+            }
+
+            .mCSB_inside{
+                .mCSB_container{
+                    margin-right: 0;
+
+                    @include respond('phone'){
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .footer-menu{
+            display: none;
+            width: 0;
+        }
+
+        @include respond('phone'){
+            margin-left: 0;
+            left: 0;
+        }
+    }
+
+    @include respond('phone'){
+        position: absolute;
+        z-index: 9;
+        left: -280px;
+    }
+}

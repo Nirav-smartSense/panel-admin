@@ -1,0 +1,181 @@
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include respond('tab-port'){
+        flex-wrap: wrap;
+    }
+    @include respond('phone'){
+        display: block;
+    }
+}
+.text-center{
+    text-align: center;
+}
+.cards-main{
+
+    .text-center{
+        .card-box{
+            width: 100%;
+        }
+    }
+    .card-box{
+        margin: 20px;
+        border: 1px solid $grey-shade1;
+        border-radius: 5px;
+        width: 33.33%;
+
+        img{
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .card-desc{
+            padding: 20px 20px 40px;
+
+            .card-title{
+                margin: 0;
+
+                @include respond('tab-port'){
+                    font-size: 18px;
+                }
+                @include respond('phone'){
+                    font-size: 18px;
+                }
+            }
+            .sub-title{
+                color: $grey-shade;
+                margin: 10px 0 0;
+            }
+            p{
+                font-size: 14px;
+                margin: 20px 0 30px;
+            }
+            .btn-link{
+                text-decoration: none;
+                font-size: 16px;
+                color: $white-color;
+                background-color: $blue-color;
+                padding: 7px;
+                border-radius: 5px;
+                transition: all .5s;
+                border: 1px solid transparent;
+    
+                &:hover{
+                    background-color: $white-color;
+                    color: $blue-color;
+                    border: 1px solid $blue-color;
+                }
+
+                @include respond('tab-port'){
+                    font-size: 14px;
+                }
+                @include respond('phone'){
+                    font-size: 12px;
+                }
+            }
+        }
+
+        ul{
+            &.cardlist-struct{
+                padding: 0;
+                margin: 0;
+
+                li{
+                    list-style-type: none;
+                    padding: 15px 20px;
+                    font-size: 14px;
+                    border-top: 1px solid $grey-shade1;
+
+                    &:last-child{
+                        font-size: 14px;
+                        padding: 20px;
+                        a{
+                            text-decoration: none;
+                            margin-right: 10px;
+                            font-weight: bold;
+                            color: $black-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-header{
+            padding: 15px 20px;
+            font-size: 16px;
+            color: $black-color;
+            border-bottom: 1px solid $grey-shade1;
+
+            .nav{
+                padding: 0;
+                margin: 0;
+                text-align: left;
+
+                li{
+                    display: inline-block;
+                    margin-bottom: -1px;
+                    
+                    a{
+                        text-decoration: none;
+                        color: $grey-shade;
+                        padding: 10px;
+                        display: block;
+                        border: 1px solid transparent;
+
+                        &.active{
+                            border-color: #dee2e6 #dee2e6 #fff;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-footer{
+            padding: 15px 20px;
+            font-size: 16px;
+            color: $black-color;
+            border-top: 1px solid $grey-shade1;
+        }
+
+        &.bg-red{
+            background-color: $red-color;
+        }
+        &.success-box{
+            border: 1px solid $green-color;
+        }
+
+        @include respond('tab-port'){
+            width: 45%;
+            margin: 20px 10px;
+        }
+        @include respond('phone'){
+            margin: 20px 0;
+            width: 100%;
+        }
+    }
+
+    .card-main__main__imgCard__cardesc{
+        .card-desc{
+            p{
+                margin: 20px 0 0;
+            }
+        }
+    }
+
+    .card-main__main__cardlist__cardesc{
+        .card-desc{
+            p{
+                margin: 20px 0 0;
+            }
+        }
+    }
+
+    .card-main__navbar{
+        .card-header{
+            padding: 15px 20px 0;
+        }
+    }
+}

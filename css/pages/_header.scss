@@ -1,0 +1,234 @@
+.header{
+    font-family: $font-family;
+    padding: 13px 30px;
+    border-bottom: 1px solid $grey-shade1;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .header-left{
+
+        ul{
+            padding: 0;
+            margin: 0;
+
+            li{
+                display: inline-block;
+                margin-right: 15px;
+                
+                a{
+                    color: $grey-shade;
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .search-bar{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 62px;
+            background: $white-color;
+            z-index: 9;
+            display: none;
+
+            input{
+                border: none;
+                outline: none;
+                height: 60px;
+                width: 95%;
+                padding: 0 10px;
+            }
+
+            .fa{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .header-right{
+        ul{
+            padding: 0;
+            margin: 0;
+
+            li{
+                display: inline-block;
+                list-style-type: none;
+                padding: 0 10px;
+                position: relative;
+
+                a{
+                    display: block;
+                    transition: all .3s;
+
+                    img{
+                        height: 35px;
+                        vertical-align: middle;
+                    }
+
+                    &:hover{
+                        color: $blue-color;
+                    }
+
+                    &:focus{
+                        color: $blue-color;
+                    }
+                }
+
+                span{
+                    position: absolute;
+                    height: 5px;
+                    width: 5px;
+                    background: $blue-color;
+                    top: -5px;
+                    right: 7px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .user-profile{
+            position: absolute;
+            top: 62px;
+            right: 30px;
+            background: $white-color;
+            width: 250px;
+            border: 1px solid $grey-shade1;
+            display: none;
+            transition: all .4s;
+
+            .profile-dv{
+                display: flex;
+                padding: 20px 40px;
+                border-bottom: 1px solid $grey-shade1;
+
+                .img-dv{
+                    display: inline-block;
+                    img{
+                        height: 35px;
+                        margin-right: 20px;
+                    }
+                }
+
+                .details{
+                    h2{
+                        font-size: 14px;
+                        margin:0;
+                    }
+
+                    span{
+                        font-size: 10px;
+                        color: $grey-shade;
+                    }
+                }
+                
+            }
+
+            ul{
+                padding: 0;
+                margin: 20px 0 0;
+
+                li{
+                    display: block;
+                    list-style-type: none;
+                    padding: 10px 20px;
+                    border-left: 1px solid transparent;
+
+                    a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        color: $black-color-1;
+                    }
+
+                    &:hover{
+                        background: $grey-shade1;
+                        border-left: 1px solid $blue-color;
+                    }
+                }
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: -15px;
+                right: 10px;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid $grey-shade1;
+            }
+        }
+
+        .notification-dv{
+            position: absolute;
+            top: 62px;
+            right: 130px;
+            background: $white-color;
+            width: 300px;
+            border: 1px solid $grey-shade1;
+            display: none;
+            transition: all .4s;
+
+            .notification-item{
+                display: flex;
+                padding: 15px 10px;
+                border-bottom: 1px solid $grey-shade1;
+
+                .img-dv{
+                    display: inline-block;
+                    img{
+                        height: 35px;
+                        margin-right: 20px;
+                    }
+                }
+
+                .notification-desc{
+                    position: relative;
+                    width: 100%;;
+
+                    h2{
+                        font-size: 14px;
+                        margin:0;
+                    }
+
+                    span{
+                        font-size: 10px;
+                        color: $grey-shade;
+                    }
+
+                    p{
+                        font-size: 10px;
+                        color: $grey-shade;
+                        margin: 0;
+                        float: right;
+                    }
+                }
+            }
+
+            .notification-footer{
+                padding:10px;
+                text-align: center;
+
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $black-color-1;
+                    font-size: 12px;
+                }
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: -15px;
+                right: 10px;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid #e7e7e7;
+            }
+        }
+    }
+}

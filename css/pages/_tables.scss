@@ -1,0 +1,117 @@
+.tables-main{
+    font-family: $font-family;
+    table{
+        width: 100%;
+        font-size: 13px;
+
+        tr{
+            th{
+                text-align: left;
+                font-weight: normal;
+                padding: 10px;
+                border-bottom: 1px solid $grey-shade1;
+            }
+    
+            td{
+                padding: 10px;
+                border-bottom: 1px solid $grey-shade1;
+            }
+ 
+        }
+
+        &.table-strip{
+            tr{
+                &:nth-of-type(odd){
+                    background-color: $grey-shade1;
+                }
+            }
+        }
+
+        &.table-hover{
+            tr{
+                &:hover{
+                    background-color: $grey-shade1;
+                }
+            }
+        }
+
+        &.table-media{
+            tr{
+                td{
+                    .media{
+                        display: flex;
+                        img{
+                            height: 35px;
+                            margin-right: 10px;
+                        }
+
+                        h2{
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                        p{
+                            margin: 0;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.table-action{
+            tr{
+                td{
+                    a{
+                        text-decoration: none;
+                        color: $black-color;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        &.table-colored{
+            tr{
+                &:nth-of-type(odd){
+                    background-color: $red-color-2;
+                }
+                &:nth-of-type(even){
+                    background-color: $green-color;
+                }
+            }
+        }
+
+        &.table-foo{
+            tr{
+                .fa{
+                    cursor: pointer;
+                    margin-right: 5px;
+                    color: $black-color;
+                }
+            }
+            .foo-inner{
+                background-color: $grey-shade;
+                color: $white-color;
+                display: none;
+
+                .row-inner{
+                    display: table;
+
+                    .row-detail{
+                        display: table-row;
+
+                        div{
+                            display: table-cell;
+
+                            &.row-detail-name{
+                                font-weight: 600;
+                                padding: 0 10px 5px 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

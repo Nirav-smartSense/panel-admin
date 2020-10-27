@@ -1,0 +1,188 @@
+.forms-main{
+    margin-top: 30px;
+    font-family: $font-family;
+
+    .forms-basic{
+        h2{
+            font-size: 22px;
+            line-height: 38px;
+            margin: 0 0 30px;
+        }
+
+        .forms-input{
+            padding: 7px 10px;
+            font-size: 13px;
+            border: 1px solid $grey-shade1;
+            border-radius: 3px;
+            outline: none;
+            width: 320px;
+            margin: 0 10px 20px 0;
+            height: 15px;
+            transition: all .4s;
+
+            &.success-st{
+                border:1px solid $green-color;
+            }
+
+            &.warning-st{
+                border:1px solid $grey-shade;
+            }
+
+            &.danger-st{
+                border:1px solid $red-color;
+            }
+
+            @include respond('phone'){
+                width: 75%;
+                padding: 7px 5px;
+            }
+        }
+
+        .checkbox-dv{
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+        .radio-dv{
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+
+        .input-grp{
+            display: flex;
+
+            .input-grp-ic{
+                padding: 10px;
+                text-align: center;
+                color: $black-color-1;
+                background: $grey-shade1;
+                font-size: 16px;
+                line-height: 10px;
+                height: 11px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            .forms-input{
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                margin-right: 0;
+            }
+
+            &.right-ic-grp{
+                .input-grp-ic{
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+                .forms-input{
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+            }
+
+            &.both-ic-grp{
+                .left-ic{
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                .right-ic{
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+                .forms-input{
+                    border-radius: 0;
+                }
+            }
+        }
+
+        .input-btn{
+
+            button{
+                padding: 8px 15px;
+                margin-right: -5px;
+                border: 1px solid $black-color-1;
+                font-size: 13px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                background: $white-color;
+                cursor: pointer;
+                transition: all .5s;
+                vertical-align: top;
+
+                &:hover{
+                    background: $black-color-1;
+                    color: $white-color;
+                }
+            }
+            .forms-input{
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-left: 1px solid $black-color-1;
+                height: 16px;
+
+                &:focus{
+                    border: 1px solid $black-color-1;
+                }
+            }
+
+            &.right-input-btn{
+                button{
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    margin-right: 0;
+                    margin-left: -5px;
+                }
+
+                .forms-input{
+                    margin-right: 0;
+                    border-left: 1px solid $grey-shade1;
+                    border-right: 1px solid $black-color-1;
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    &:focus{
+                        border-left: 1px solid $black-color-1;
+                    }
+                }
+            }
+        }
+
+        .range-slider{
+            
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 25px;
+                background: $grey-shade1;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                border-radius:15px;
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 35px;
+                    height: 35px;
+                    background: $green-color;
+                    cursor: pointer;
+                    border-radius:50%;
+                  }
+              }
+        }
+    }
+}
