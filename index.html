@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/common/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/common/_normalize.scss">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- sidebar panel -->
     <div class="sidebar-panel">
         <div class="sidebar-panel__logo">
-            <a class="logo_main" href="index.html">Avesta</a>
-            <a class="logo_colls" href="index.html">A</a>   
+            <a class="sidebar-panel__logo--main" href="index.html">Avesta</a>
+            <a class="sidebar-panel__logo--colls" href="index.html">A</a>   
 
-            <span class="cls-btn">X</span>
+            <span class="sidebar-panel__logo--cls-btn">X</span>
         </div>
 
-        <div class="sidebar-inner">
+        <div class="sidebar-panel__sidebar">
             <ul>
-                <li class="menu-header">NAVIGATION</li>
-                <li class="active">
+                <li class="sidebar-panel__sidebar--header">NAVIGATION</li>
+                <li class="sidebar-panel__sidebar--tab active">
                     <a href="#">
                         <i class="fa fa-home" aria-hidden="true"></i>
                         <span>Dashborad</span> 
@@ -37,7 +35,7 @@
                         <li><a href="#">Sales</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <span>Mailbox</span> 
@@ -49,7 +47,7 @@
                         <li><a href="#">Sales</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-folder-o" aria-hidden="true"></i>
                         <span>App Views</span> 
@@ -57,8 +55,8 @@
                     </a>
                 </li>
 
-                <li class="menu-header">Elements</li>
-                <li>
+                <li class="sidebar-panel__sidebar--header">Elements</li>
+                <li  class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-underline" aria-hidden="true"></i>
                         <span>UI Elements</span>  
@@ -69,49 +67,49 @@
                         <li><a href="accordion.html">Accordion</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-life-ring" aria-hidden="true"></i>
                         <span>UI Utilities</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="grid.html">
                         <i class="fa fa-th" aria-hidden="true"></i>
                         <span>Grid</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-gift" aria-hidden="true"></i>
                         <span>Icons</span> 
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="forms.html">
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
                         <span>Forms</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="table.html">
                         <i class="fa fa-database" aria-hidden="true"></i>
                         <span>Tables</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-pie-chart" aria-hidden="true"></i>
                         <span>Charts</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-map-o" aria-hidden="true"></i>
                         <span>Maps</span>  
@@ -119,29 +117,29 @@
                     </a>
                 </li>
 
-                <li class="menu-header">Extras</li>
-                <li>
+                <li class="sidebar-panel__sidebar--header">Extras</li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-key" aria-hidden="true"></i>
                         <span>Authentication</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-plug" aria-hidden="true"></i>
                         <span>Plugins</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-codepen" aria-hidden="true"></i>
                         <span>UI Kit</span>  
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </a>
                 </li>
-                <li>
+                <li class="sidebar-panel__sidebar--tab">
                     <a href="#">
                         <i class="fa fa-print" aria-hidden="true"></i>
                         <span>Mail Template</span>  
@@ -151,18 +149,18 @@
             </ul>
         </div>
 
-        <div class="footer-menu">
+        <div class="sidebar-panel__footer">
             <ul>
-                <li>
+                <li class="sidebar-panel__footer--tab">
                     <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
                 </li>
-                <li>
+                <li class="sidebar-panel__footer--tab">
                     <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
                 </li>
-                <li>
+                <li class="sidebar-panel__footer--tab">
                     <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
                 </li>
-                <li>
+                <li class="sidebar-panel__footer--tab">
                     <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
                 </li>
             </ul>
@@ -435,12 +433,12 @@
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
-
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    
     <script>
         (function($){
             $(window).on("load",function(){
-                $(".sidebar-inner").mCustomScrollbar();
+                $(".sidebar-panel__sidebar").mCustomScrollbar();
             });
         })(jQuery);
     </script>

@@ -19,14 +19,14 @@ $('.notification-btn').click(function(){
 });
 
 //mobile sidebar
-$('.cls-btn').click(function(){
+$('.sidebar-panel__logo--cls-btn').click(function(){
     $('.sidebar-panel').removeClass('collapsed');
 });
 
 //submenu toggle & active
-$('.sidebar-inner ul li').click(function(){
+$('.sidebar-panel__sidebar ul li').click(function(){
     $(this).find('.sub-menu').slideToggle();
-    $('.sidebar-inner ul li').removeClass('active');
+    $('.sidebar-panel__sidebar ul li').removeClass('active');
     $(this).addClass('active');
 });
 

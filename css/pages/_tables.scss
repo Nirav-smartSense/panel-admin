@@ -20,7 +20,7 @@
  
         }
 
-        &.table-strip{
+        &.tables-main__strip{
             tr{
                 &:nth-of-type(odd){
                     background-color: $grey-shade1;
@@ -28,7 +28,7 @@
             }
         }
 
-        &.table-hover{
+        &.tables-main__hover{
             tr{
                 &:hover{
                     background-color: $grey-shade1;
@@ -36,7 +36,7 @@
             }
         }
 
-        &.table-media{
+        &.tables-main__media{
             tr{
                 td{
                     .media{
@@ -59,7 +59,7 @@
             }
         }
 
-        &.table-action{
+        &.tables-main__action{
             tr{
                 td{
                     a{
@@ -71,7 +71,7 @@
             }
         }
 
-        &.table-colored{
+        &.tables-main__colored{
             tr{
                 &:nth-of-type(odd){
                     background-color: $red-color-2;
@@ -82,7 +82,7 @@
             }
         }
 
-        &.table-foo{
+        &.tables-main__foo{
             tr{
                 .fa{
                     cursor: pointer;

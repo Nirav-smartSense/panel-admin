@@ -7,7 +7,14 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ @font-face {
+  font-family: 'IBM Plex Sans, sans-serif';
+  src: url('fonts/ibmplexsans-regular-webfont.woff2') format('woff2'),
+       url('fonts/ibmplexsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
+}
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */

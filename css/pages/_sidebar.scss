@@ -19,14 +19,14 @@
             color: $white-color;
             transition: all .5s;
 
-            &.logo_colls{
+            &.sidebar-panel__logo--colls{
                 display: none;
                 font-size: 48px;
                 font-weight: bold;
             }
         }
 
-        span{
+        &--cls-btn{
             font-size: 14px;
             color: $white-color;
             position: absolute;
@@ -42,7 +42,7 @@
         
     }
 
-    .sidebar-inner{
+    &__sidebar{
         height: 590px;
 
         ul{
@@ -94,7 +94,7 @@
                     color: $grey-shade;
                     text-decoration: none;
                     padding: 5px 15px;
-                    // transition: all .4s;
+                    transition: all .4s;
                     display: block;
 
                     svg{
@@ -120,7 +120,7 @@
                     }
                 }
                 
-                &.menu-header{
+                &.sidebar-panel__sidebar--header{
                     color: $white-color;
                     margin: 20px 0 0 15px;
                     text-transform: uppercase;
@@ -146,7 +146,7 @@
         }
     }
 
-    .footer-menu{
+    &__footer{
         position: fixed;
         bottom: 0px;
         left: 0px;
@@ -180,21 +180,22 @@
     }
 
     &.collapsed{
-        // width: 60px;
-        margin-left: -180px;
+        width: 70px;
+        //margin-left: -180px;
 
         .sidebar-panel__logo{
             transition: all .5s;
             a{
-                &.logo_main{
+                &.sidebar-panel__logo--main{
                     display: none;
                     @include respond('phone'){
                         display: inline-block;
                     }
                 }
-                &.logo_colls{
+                &.sidebar-panel__logo--colls{
                     display: block;
-                    margin-left: 180px;
+                    //margin-left: 180px;
+                    transition: all .5s;
 
                     @include respond('phone'){
                         display: none;
@@ -203,12 +204,12 @@
             }
         }
 
-        .sidebar-inner{
+        .sidebar-panel__sidebar{
             ul{
                 li{
                     a{
-                        margin-left: 180px;
-                        // transition: all .5s;
+                        //margin-left: 180px;
+                         transition: all .4s;
                         span{
                             display: none;
                             @include respond('phone'){
@@ -235,7 +236,7 @@
                         }
                     }
 
-                    &.menu-header{
+                    &.sidebar-panel__sidebar--header{
                         display: none;
                     }
 
@@ -256,7 +257,7 @@
             }
         }
 
-        .footer-menu{
+        .sidebar-panel__footer{
             display: none;
             width: 0;
         }
