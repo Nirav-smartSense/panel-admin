@@ -1,5 +1,6 @@
+//accodion section
 .accord-main{
-    .accord-main__button{
+    &__button{
         background-color: $grey-shade1;
         color: $black-color;
         cursor: pointer;
@@ -39,7 +40,7 @@
         }
     }
 
-    .accord-main__accord-panel{
+    &__accord-panel{
         background-color: $grey-color-4;
         border: 1px solid $grey-shade1;
         padding: 15px;
@@ -48,11 +49,13 @@
         display: none;
     }
 }
+//accodion section end
 
+//popover section
 .popovers-main{
     position: relative;
 
-    .popovers-main__button{
+    &__button{
         padding: 10px 25px;
         color: $white-color;
         background-color: $grey-color-1;
@@ -67,7 +70,7 @@
         }
     }
 
-    .popovers-main__desc{
+    &__desc{
         position: absolute;
         width: 250px;
         background-color: $grey-color-5;
@@ -112,10 +115,13 @@
         }
     }
 }
+//popover section end
 
+
+//loader section
 .loader-main{
     margin: 50px;
-    .loader-main__dv{
+    &__dv{
         border: 5px solid $white-color;
         height: 40px;
         width: 40px;
@@ -129,7 +135,7 @@
         100% { transform: rotate(360deg); }
     }
 
-    .loader-main__circle{
+    &__circle{
         margin-top: 50px;
         height: 40px;
         width: 40px;
@@ -142,3 +148,4 @@
         100% { transform: scale(1); background-color: $red-color; }
     }
 }
+//loader section end

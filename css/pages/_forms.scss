@@ -1,8 +1,9 @@
+//forms section
 .forms-main{
     margin-top: 30px;
     font-family: $font-family;
 
-    .forms-basic{
+    &__forms-basic{
         h2{
             font-size: 22px;
             line-height: 38px;
@@ -186,3 +187,4 @@
         }
     }
 }
+//forms section end
