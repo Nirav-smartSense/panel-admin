@@ -65,12 +65,12 @@
                         }
                     }
 
-                    .sub-menu{
+                    .sidebar-panel__sidebar--tab--sub-menu{
                         display: block;
                     }
                 }
 
-                .sub-menu{
+                .sidebar-panel__sidebar--tab--sub-menu{
                     padding-left: 30px;
                     display: none;
 
@@ -231,7 +231,7 @@
                     }
 
                     &.active{
-                        ul{
+                        .sidebar-panel__sidebar--tab--sub-menu{
                             display: none !important;
                         }
                     }

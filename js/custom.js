@@ -24,9 +24,10 @@ $('.sidebar-panel__logo--cls-btn').click(function(){
 });
 
 //submenu toggle & active
-$('.sidebar-panel__sidebar ul li').click(function(){
-    $(this).find('.sub-menu').slideToggle();
-    $('.sidebar-panel__sidebar ul li').removeClass('active');
+$('.sidebar-panel__sidebar--tab').click(function(){
+    
+    $(this).find('.sidebar-panel__sidebar--tab--sub-menu').slideToggle();
+    $('.sidebar-panel__sidebar--tab').removeClass('active');
     $(this).addClass('active');
 });
 

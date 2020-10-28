@@ -1250,20 +1250,20 @@ template {
           transform: rotate(-90deg);
 }
 
-.sidebar-panel__sidebar ul li.active .sub-menu {
+.sidebar-panel__sidebar ul li.active .sidebar-panel__sidebar--tab--sub-menu {
   display: block;
 }
 
-.sidebar-panel__sidebar ul li .sub-menu {
+.sidebar-panel__sidebar ul li .sidebar-panel__sidebar--tab--sub-menu {
   padding-left: 30px;
   display: none;
 }
 
-.sidebar-panel__sidebar ul li .sub-menu li {
+.sidebar-panel__sidebar ul li .sidebar-panel__sidebar--tab--sub-menu li {
   position: relative;
 }
 
-.sidebar-panel__sidebar ul li .sub-menu li::before {
+.sidebar-panel__sidebar ul li .sidebar-panel__sidebar--tab--sub-menu li::before {
   position: absolute;
   content: '';
   height: 3px;
@@ -1426,7 +1426,7 @@ template {
   }
 }
 
-.sidebar-panel.collapsed .sidebar-panel__sidebar ul li.active ul {
+.sidebar-panel.collapsed .sidebar-panel__sidebar ul li.active .sidebar-panel__sidebar--tab--sub-menu {
   display: none !important;
 }
 
