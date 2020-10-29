@@ -59,12 +59,12 @@
 
 //gallery-slider section
 .gallery-slider{
-    .gallery-slider__container{
+    &__container{
         width: 100%;
         max-width: 100%;
         position: relative;
 
-        .slides{
+        &__slides{
             display: none;
 
             img{
@@ -84,7 +84,7 @@
 
         }
 
-        .prev-btn{
+        &__prev-btn{
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -99,7 +99,7 @@
             user-select: none;
         }
 
-        .next-btn{
+        &__next-btn{
             cursor: pointer;
             position: absolute;
             top: 50%;

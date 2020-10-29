@@ -19,98 +19,94 @@
             }
  
         }
+        
+    }
 
-        &.tables-main__strip{
-            tr{
-                &:nth-of-type(odd){
-                    background-color: $grey-shade1;
-                }
+    &__strip{
+        tr{
+            &:nth-of-type(odd){
+                background-color: $grey-shade1;
             }
         }
-
-        &.tables-main__hover{
-            tr{
-                &:hover{
-                    background-color: $grey-shade1;
-                }
+    }
+    &__hover{
+        tr{
+            &:hover{
+                background-color: $grey-shade1;
             }
         }
-
-        &.tables-main__media{
-            tr{
-                td{
-                    .media{
-                        display: flex;
-                        img{
-                            height: 35px;
-                            margin-right: 10px;
-                        }
-
-                        h2{
-                            margin: 0;
-                            font-size: 14px;
-                        }
-                        p{
-                            margin: 0;
-                            font-size: 10px;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.tables-main__action{
-            tr{
-                td{
-                    a{
-                        text-decoration: none;
-                        color: $black-color;
+    }
+    &__media{
+        tr{
+            td{
+                .media{
+                    display: flex;
+                    img{
+                        height: 35px;
                         margin-right: 10px;
                     }
-                }
-            }
-        }
 
-        &.tables-main__colored{
-            tr{
-                &:nth-of-type(odd){
-                    background-color: $red-color-2;
-                }
-                &:nth-of-type(even){
-                    background-color: $green-color;
-                }
-            }
-        }
-
-        &.tables-main__foo{
-            tr{
-                .fa{
-                    cursor: pointer;
-                    margin-right: 5px;
-                    color: $black-color;
-                }
-            }
-            .foo-inner{
-                background-color: $grey-shade;
-                color: $white-color;
-                display: none;
-
-                .row-inner{
-                    display: table;
-
-                    .row-detail{
-                        display: table-row;
-
-                        div{
-                            display: table-cell;
-
-                            &.row-detail-name{
-                                font-weight: 600;
-                                padding: 0 10px 5px 0;
-                            }
-                        }
-
+                    h2{
+                        margin: 0;
+                        font-size: 14px;
                     }
+                    p{
+                        margin: 0;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &__action{
+        tr{
+            td{
+                a{
+                    text-decoration: none;
+                    color: $black-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &__colored{
+        tr{
+            &:nth-of-type(odd){
+                background-color: $red-color-2;
+            }
+            &:nth-of-type(even){
+                background-color: $green-color;
+            }
+        }
+    }
+    &__foo{
+        tr{
+            .fa{
+                cursor: pointer;
+                margin-right: 5px;
+                color: $black-color;
+            }
+        }
+        &__foo-inner{
+            background-color: $grey-shade;
+            color: $white-color;
+            display: none;
+
+            &__row-inner{
+                display: table;
+
+                &__row-detail{
+                    display: table-row;
+
+                    div{
+                        display: table-cell;
+
+                        &.row-detail-name{
+                            font-weight: 600;
+                            padding: 0 10px 5px 0;
+                        }
+                    }
+
                 }
             }
         }

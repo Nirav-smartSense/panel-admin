@@ -18,12 +18,12 @@
             text-decoration: none;
             color: $white-color;
             transition: all .5s;
+        }
 
-            &.sidebar-panel__logo--colls{
-                display: none;
-                font-size: 48px;
-                font-weight: bold;
-            }
+        &--colls{
+            display: none;
+            font-size: 48px;
+            font-weight: bold;
         }
 
         &--cls-btn{
@@ -45,37 +45,24 @@
     &__sidebar{
         height: 590px;
 
-        ul{
+        &__list{
             padding: 0;
             margin: 0;
-            li{
+
+            &__tab{
                 font-size: 13px;
                 line-height: 18px;
                 padding: 5px 0;
                 list-style-type: none;
                 color: $grey-shade;
 
-                &.active{
-                    
-                    a{
-                        color: $white-color;
-
-                        .fa-chevron-left{
-                            transform: rotate(-90deg);
-                        }
-                    }
-
-                    .sidebar-panel__sidebar--tab--sub-menu{
-                        display: block;
-                    }
-                }
-
-                .sidebar-panel__sidebar--tab--sub-menu{
+                &__sub-menu{
                     padding-left: 30px;
                     display: none;
 
-                    li{
+                    &__sub-tab{
                         position: relative;
+                        list-style-type: none;
 
                         &::before{
                             position: absolute;
@@ -97,13 +84,6 @@
                     transition: all .4s;
                     display: block;
 
-                    svg{
-                        margin-right: 7px;
-                        vertical-align: bottom;
-                        height: 18px;
-                        width: 18px;
-                    }
-
                     &:hover{
                         color: $white-color;
                     }
@@ -119,14 +99,29 @@
                         line-height: 18px;
                     }
                 }
-                
-                &.sidebar-panel__sidebar--header{
-                    color: $white-color;
-                    margin: 20px 0 0 15px;
-                    text-transform: uppercase;
-                    font-size: 11px;
-                    letter-spacing: 2px;
+
+                &.active{
+                    
+                    a{
+                        color: $white-color;
+
+                        .fa-chevron-left{
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    .sidebar-panel__sidebar__list__tab__sub-menu{
+                        display: block;
+                    }
                 }
+            }
+            &__header{
+                color: $white-color;
+                margin: 20px 0 0 15px;
+                text-transform: uppercase;
+                font-size: 11px;
+                list-style-type: none;
+                letter-spacing: 2px;
             }
         }
 
@@ -155,13 +150,13 @@
         background: $black-color-1;
         transition: all .5s;
 
-        ul{
+        &__footlist{
             display: flex;
             padding: 0;
             margin: 0;
             text-align: center;
 
-            li{
+            &__footertab{
                 list-style-type: none;
                 width: 100%;
                 padding: 15px;
@@ -205,7 +200,7 @@
         }
 
         .sidebar-panel__sidebar{
-            ul{
+            &__list{
                 li{
                     a{
                         //margin-left: 180px;
@@ -231,12 +226,12 @@
                     }
 
                     &.active{
-                        .sidebar-panel__sidebar--tab--sub-menu{
+                        .sidebar-panel__sidebar__list__tab__sub-menu{
                             display: none !important;
                         }
                     }
 
-                    &.sidebar-panel__sidebar--header{
+                    &.sidebar-panel__sidebar__list__header{
                         display: none;
                     }
 

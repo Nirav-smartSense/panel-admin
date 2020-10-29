@@ -25,7 +25,7 @@
             justify-content: space-between;
             margin-bottom: 30px;
 
-            .title{
+            &__title{
 
                 h2{
                     font-size: 20px;
@@ -73,7 +73,7 @@
                 }
             }
 
-            .page-filter{
+            &__page-filter{
                 select{
                     padding: 10px;
                     border: 1px solid $grey-shade1;
@@ -211,19 +211,19 @@
                 width: 74%;
                 display: inline-block;
 
-                .chart-bar-dv{
+                &__chart-bar-dv{
                     border: 1px solid $grey-shade1;
                     padding: 10px 20px;
                     border-radius: 3px;
 
-                    ul{
+                    &__list{
                         padding: 0;
                         margin: 0;
                         width: 30%;
                         display: inline-block;
                         vertical-align: top;
 
-                        li{
+                        &__tab{
                             list-style-type: none;
                             padding: 10px 0;
 
@@ -274,7 +274,7 @@
                         }
                     }
 
-                    .chart-dv{
+                    &__chart-dv{
                         width: 65%;
                         display: inline-block;
 
@@ -285,7 +285,7 @@
                     }
                 }
 
-                .round-chart-dv{
+                &__round-chart-dv{
                     display: flex;
                     margin-top: 30px;
 
@@ -309,7 +309,7 @@
                             color: $grey-shade;
                         }
 
-                        .round-dv{
+                        &__round-dv{
                             margin-top: 20px;
 
                             svg{
@@ -342,14 +342,14 @@
 
                             
 
-                            ul{
+                            &__list{
                                 padding: 0;
                                 margin: 10px 0 0;
-                                width: 49%;
+                                width: 48%;
                                 display: inline-block;
                                 vertical-align: top;
     
-                                li{
+                                &__tab{
                                     list-style-type: none;
                                     font-size: 14px;
                                     padding: 5px 0;
@@ -430,13 +430,13 @@
                 margin-left: 25px;
                 vertical-align: top;
 
-                .ernings-dv{
+                &__ernings-dv{
                     padding: 0 30px;
                     &__media{
                         display: flex;
                         margin-bottom: 20px;
 
-                        .media-left{
+                        &__media-left{
                             width: 20%;
                             margin-right: 20px;
 
@@ -465,7 +465,7 @@
                             }
                         }
 
-                        .media-right{
+                        &__media-right{
                             h4{
                                 margin: 0;
                                 font-size: 10px;
@@ -485,6 +485,30 @@
                     }
                 }
 
+                &__tables{
+                    font-size: 12px;
+                    width: 100%;
+                    tr{
+                        &:hover{
+                            background: $grey-shade1;
+                        }
+    
+                        th{
+                            text-align: left;
+                            font-weight: normal;
+                            color: $grey-shade;
+                            padding: 10px 5px;
+                            border-top: 1px solid $grey-shade1;
+                        }
+                        td{
+                            padding: 10px 5px;
+                            border-top: 1px solid $grey-shade1;
+                        }
+                    }
+    
+                    
+                }
+
                 @include respond('tab-port'){
                     margin: 20px 0 0 0;
                     width: 100%;
@@ -496,29 +520,7 @@
                 
             }
 
-            table{
-                font-size: 12px;
-                width: 100%;
-                tr{
-                    &:hover{
-                        background: $grey-shade1;
-                    }
-
-                    th{
-                        text-align: left;
-                        font-weight: normal;
-                        color: $grey-shade;
-                        padding: 10px 5px;
-                        border-top: 1px solid $grey-shade1;
-                    }
-                    td{
-                        padding: 10px 5px;
-                        border-top: 1px solid $grey-shade1;
-                    }
-                }
-
-                
-            }
+            
         }
 
         @include respond('phone'){
